@@ -2,6 +2,8 @@ SELECT o.id, o.home_address as "Ім'я", o.firstname as "Прізвище", p.b
 from owners as o
 join pets as p
 ON o.id = p.owner_id
+group by o.id, p.breed, p.name
+order by o.firstname desc
 
 
 SELECT  COUNT(*) as "К-сть", p.name as "Кличка"
@@ -41,6 +43,7 @@ group by o.home_address, o.firstname
 select o.firstname, o.home_address, p.id, p.name from pets p
 join owners o on o.id = p.owner_id
 where not exists (select * from visits v where v.id = p.id) 
+group by p.id,o.home_address, o.firstname
 
 
 
