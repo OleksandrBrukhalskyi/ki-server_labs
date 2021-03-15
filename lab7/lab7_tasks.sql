@@ -69,7 +69,7 @@ SELECT o.id, o.home_address as "Ім'я", o.firstname as "Прізвище", p.b
 from owners as o
 join pets as p
 ON o.id = p.owner_id
-order by p.breed
+order by p.breed 
 
 
 -- qty of pets's names ordered by qtys in desc

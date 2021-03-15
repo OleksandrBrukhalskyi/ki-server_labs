@@ -2,7 +2,7 @@ CREATE VIEW pets_breed AS SELECT id, breed
 FROM pets
 
 SELECT * from pets_breed 
-WHERE breed LIKE 'Б%'
+WHERE breed LIKE '%д%'
 
 
 SELECT o.id, o.home_address as "Ім'я", o.firstname as "Прізвище", p.breed as "Порода", p.name as "Кличка"
