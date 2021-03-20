@@ -11,3 +11,13 @@ start TRANSACTION;
 commit;
 
 
+start TRANSACTION;
+    insert into visits (goal_of_visit,visit_date,pet_id) values('Аналіз крові','2015-07-02', 1);
+    insert into visits (goal_of_visit,visit_date,pet_id) values('Аналіз крові','2017-02-15', 2);
+commit;
+
+start TRANSACTION;
+    insert into visits (goal_of_visit,visit_date,pet_id) values('Аналіз крові','2015-07-02', 1);
+    insert into visits (goal_of_visit,visit_date,pet_id) values('Аналіз крові','2017-02-15', 97);
+commit;
+
